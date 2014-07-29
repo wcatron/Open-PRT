@@ -48,3 +48,15 @@ The PodCar's goal is to recieve assignments from it's base server and complete t
 - BaseServer
 - KnownServers
 - Owner
+
+## PodCar Scanners
+
+#### Goals
+
+The scanner's goal is to inspect PodCars for exposives, toxins, and general waste and clear them without disrupting their assignments. The scanners direct approaching podcars to be scanned, refusal is flagged. If a scan displays an issue the PodCar is given a new assignment to either quarentine or follow-up. Refusal to do either is flagged. Follow ups would use additinal more granular scanning.
+
+#### Data
+
+- Location
+- Approaching PodCars
+- ServersInZone
