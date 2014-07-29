@@ -18,17 +18,20 @@ Information they contain.
 
 The manager of all tasks associated with the PRT.
 
-- OperationalSet 
+#### Goals
+
+The server's goal is to assign tasks to their fleet. Maintain the health of thier fleet. Proccess requests for rides.
+
+- Fleet 
 	- Location
 	- FreeAt
 	- Vitals
-	Complete list of PodCars reporting to this server. PodCars have the authority to switch servers as long as they complete their assigned tasks. This includes PodCars charging.
+	Complete list of PodCars reporting to this server. PodCars have the authority to switch servers as long as they complete their assigned tasks. This list includes PodCars charging.
 - Requests
 - KnownServers
 
 ## PodCar
 
 - Location
-
 - BaseServer
 - KnownServers
