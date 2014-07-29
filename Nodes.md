@@ -3,15 +3,18 @@ Nodes
 
 The objects interacting with the protocols.
 
-## Riders
+## Rider
 
-Those riding the PRT whose goal is to move from one location to another as quicly as possible.
+#### Goals
 
-Information they contain.
+The rider's goal is to move from one location to another as quickly as possible. They request rides from their base server. They keep a list of their nearest servers and select one as their base server. They notify servers of thier reassignment.
+
+#### Data
 
 - Location
 - Rides
 - Requests
+- BaseServer
 - KnownServers
 
 ## Server
