@@ -34,6 +34,7 @@ The server's goal is to assign tasks to their fleet. Maintain the health of thie
 	Complete list of PodCars reporting to this server. PodCars have the authority to switch servers as long as they complete their assigned tasks. This list includes PodCars charging.
 - Requests
 - KnownServers
+- ServiceCenters
 - Zone
 
 ## PodCar
@@ -60,3 +61,15 @@ The scanner's goal is to inspect PodCars for exposives, toxins, and general wast
 - Location
 - Approaching PodCars
 - ServersInZone
+
+## PodCar Service Centers
+
+#### Goals
+
+The service center's goal is to maintain PodCars that are assigned to go to them. They diagnose the problem and verify them for road safty.
+
+#### Data
+
+- Scheduled PodCar Visists
+- ServersInZone
+- Capacity
