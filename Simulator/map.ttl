@@ -1,0 +1,39 @@
+# this is a complete turtle document
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prt: <http://open-prt.org#> .
+@prefix : <urn:open-prt:furman.> .
+@prefix node: <urn:open-prt:furman.node.> .
+@prefix link: <urn:open-prt:furman.link.> .
+
+node:1 rdf:type <urn:open-prt:furman.node> .
+node:2 rdf:type <urn:open-prt:furman.node> .
+node:3 rdf:type <urn:open-prt:furman.node> .
+
+link:1 rdf:type <urn:open-prt:furman.link> .
+link:2 rdf:type <urn:open-prt:furman.link> .
+link:3 rdf:type <urn:open-prt:furman.link> .
+link:4 rdf:type <urn:open-prt:furman.link> .
+
+# node 1
+node:1 prt:hasLinks link:1 .
+node:1 prt:hasLinks link:3 .
+
+# node 2
+node:2 prt:hasLinks link:2 .
+
+# node 2
+node:3 prt:hasLinks link:4 .
+
+#links
+link:1 prt:fromNode node:1 ;
+    prt:toNode node:2 ;
+    prt:distance 2500 .
+link:2 prt:fromNode node:2 ;
+    prt:toNode node:1 ;
+    prt:distance 2500 .
+link:3 prt:fromNode node:1 ;
+    prt:toNode node:3 ;
+    prt:distance 2500 .
+link:4 prt:fromNode node:3 ;
+    prt:toNode node:2 ;
+    prt:distance 1500 .
