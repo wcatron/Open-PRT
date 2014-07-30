@@ -1,11 +1,11 @@
 Open PRT
 ========
 
-Open source documentation and protocols for a scalable personal rapid transit (podcar) system.
+Open source documentation and protocols for a scalable Personal Rapid Transit (PRT, aka: PodCar) system.
 
 **Vision**
 
-To create a standard for communciation between riders, podcars and decenteralized servers to maintain a PRT system.
+To create a standard for communciation between riders, podcars and decenteralized servers to maintain a PRT system. Our inspiration comes from growth of the internet due to standards, openness and healthy capitalism. We believe that any successful system will come about through a community effort and not by a single governing body, company or even a select few. 
 
 ### User Experience
 
