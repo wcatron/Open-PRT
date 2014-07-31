@@ -1,0 +1,21 @@
+{
+	"name":"Open-PRT",
+	"description":"Dataset for the Open PRT project.",
+	"source":"http://localhost:3030/ds/query",
+	"prefixes":{
+		"cts:":"http://www.homermultitext.org/cts/rdf/",
+		"cite:":"http://www.homermultitext.org/cite/rdf/",
+		"rdf:":"http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"link:":"urn:open-prt:furman.link.",
+		"node:":"urn:open-prt:furman.node.",
+		"prt:":"http://open-prt.org#"
+	},
+	"variables":{
+		"?folio":{
+	
+		},"?image":{
+	
+		}
+	},
+	"plugins":["sparqplug-in-text","sparqplug-out-json","sparqplug-out-table","sparqplug-detail-history","sparqplug-detail-saved","sparqplug-detail-object"]
+}

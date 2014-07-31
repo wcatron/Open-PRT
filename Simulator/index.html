@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<script src='js/server.js'></script>
+		<script src='js/podcar.js'></script>
+		<script src='js/rider.js'></script>
+		<script>
+		
+		var server_1 = new Server();
+		server_1.zone = [
+						"node:3",
+						"node:4",
+						"node:5",
+						"node:6",
+						"node:7",
+						"node:8"];
+		var server_2 = new Server();
+		server_2.zone = [
+						"node:1",
+						"node:2",
+						"node:3",
+						"node:8",
+						"node:9",
+						"node:10"];
+		
+		var servers = [server_1, server_2];
+		
+		var num_pod_cars = 10;
+		var speed = 5; //distance per time
+		
+		for (var i = 0; i < num_pod_cars; i++) {
+			var pod_car = new PodCar(i);
+			pod_car.setLocation({
+				"link":(i+1),
+				"distance":10+i*4
+			});
+			pod_car.knownServers = servers;
+			pod_car.getBaseServer();
+		} 
+		
+		var rider_1 = new Rider();
+		rider_1.knownServer = servers;
+		
+		rider_1.requestRide("node:5","node:9");
+		
+		function next () {
+			time += 1;
+			for (var server in servers) {
+				server.next();
+			}
+		}
+		
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

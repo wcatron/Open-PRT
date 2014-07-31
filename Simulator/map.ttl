@@ -5,35 +5,100 @@
 @prefix node: <urn:open-prt:furman.node.> .
 @prefix link: <urn:open-prt:furman.link.> .
 
-node:1 rdf:type <urn:open-prt:furman.node> .
-node:2 rdf:type <urn:open-prt:furman.node> .
-node:3 rdf:type <urn:open-prt:furman.node> .
+node:1 rdf:type <urn:open-prt:furman.node> ;
+	 	rdf:label "University Center Lake Side" .
+node:2 rdf:type <urn:open-prt:furman.node> ;
+		rdf:label "Dining Hall" .
+node:3 rdf:type <urn:open-prt:furman.node> ;
+		rdf:label "Johns Hall" .
+node:4 rdf:type <urn:open-prt:furman.node> ;
+		rdf:label "Furman Hall" .
+node:5 rdf:type <urn:open-prt:furman.node> ;
+		rdf:label "Middle of Quad" .
+node:6 rdf:type <urn:open-prt:furman.node> ;
+		rdf:label "Riley Hall" .
+node:7 rdf:type <urn:open-prt:furman.node> ;
+		rdf:label "Front of Library" .
+node:8 rdf:type <urn:open-prt:furman.node> ;
+		rdf:label "Hipp Hall" .
+node:9 rdf:type <urn:open-prt:furman.node> ;
+		rdf:label "Behind Library" .
+node:10 rdf:type <urn:open-prt:furman.node> ;
+		rdf:label "University Center".
 
-link:1 rdf:type <urn:open-prt:furman.link> .
-link:2 rdf:type <urn:open-prt:furman.link> .
-link:3 rdf:type <urn:open-prt:furman.link> .
-link:4 rdf:type <urn:open-prt:furman.link> .
+link:1 rdf:type <urn:open-prt:furman.link> ;
+		prt:fromNode node:1 ;
+		prt:toNode node:2 ;
+		prt:distance 300.
+link:2 rdf:type <urn:open-prt:furman.link> ;
+		prt:fromNode node:2 ;
+		prt:toNode node:3 ;
+		prt:distance 200 .
+link:3 rdf:type <urn:open-prt:furman.link> ;
+		prt:fromNode node:2 ;
+		prt:toNode node:9 ;
+		prt:distance 200 .
+link:4 rdf:type <urn:open-prt:furman.link> ;
+		prt:fromNode node:3 ;
+		prt:toNode node:7 ;
+		prt:distance 150 .
+link:5 rdf:type <urn:open-prt:furman.link> ;
+		prt:fromNode node:3 ;
+		prt:toNode node:9 ;
+		prt:distance 200 .
+link:6 rdf:type <urn:open-prt:furman.link> ;
+		prt:fromNode node:4 ;
+		prt:toNode node:3 ;
+		prt:distance 300 .
+link:7 rdf:type <urn:open-prt:furman.link> ;
+		prt:fromNode node:4 ;
+		prt:toNode node:7 ;
+		prt:distance 200 .
+link:8 rdf:type <urn:open-prt:furman.link> ;
+		prt:fromNode node:5 ;
+		prt:toNode node:4 ;
+		prt:distance 100 .
+link:9 rdf:type <urn:open-prt:furman.link> ;
+		prt:fromNode node:6 ;
+		prt:toNode node:5 ;
+		prt:distance 100 .
+link:10 rdf:type <urn:open-prt:furman.link> ;
+		prt:fromNode node:7 ;
+		prt:toNode node:3 ;
+		prt:distance 150 .
+link:11 rdf:type <urn:open-prt:furman.link> ;
+		prt:fromNode node:7 ;
+		prt:toNode node:6 ;
+		prt:distance 200 .
+link:12 rdf:type <urn:open-prt:furman.link> ;
+		prt:fromNode node:7 ;
+		prt:toNode node:8 ;
+		prt:distance 150 .
+link:13 rdf:type <urn:open-prt:furman.link> ;
+		prt:fromNode node:8 ;
+		prt:toNode node:6 ;
+		prt:distance 300 .
+link:14 rdf:type <urn:open-prt:furman.link> ;
+		prt:fromNode node:8 ;
+		prt:toNode node:7 ;
+		prt:distance 150 .
+link:15 rdf:type <urn:open-prt:furman.link> ;
+		prt:fromNode node:8 ;
+		prt:toNode node:10 ;
+		prt:distance 200 .
+link:16 rdf:type <urn:open-prt:furman.link> ;
+		prt:fromNode node:9 ;
+		prt:toNode node:8 ;
+		prt:distance 200 .
+link:17 rdf:type <urn:open-prt:furman.link> ;
+		prt:fromNode node:9 ;
+		prt:toNode node:10 ;
+		prt:distance 300 .
+link:18 rdf:type <urn:open-prt:furman.link> ;
+		prt:fromNode node:10 ;
+		prt:toNode node:1 ;
+		prt:distance 500.
 
-# node 1
-node:1 prt:hasLinks link:1 .
-node:1 prt:hasLinks link:3 .
-
-# node 2
-node:2 prt:hasLinks link:2 .
-
-# node 2
-node:3 prt:hasLinks link:4 .
-
-#links
-link:1 prt:fromNode node:1 ;
-    prt:toNode node:2 ;
-    prt:distance 2500 .
-link:2 prt:fromNode node:2 ;
-    prt:toNode node:1 ;
-    prt:distance 2500 .
-link:3 prt:fromNode node:1 ;
-    prt:toNode node:3 ;
-    prt:distance 2500 .
-link:4 prt:fromNode node:3 ;
-    prt:toNode node:2 ;
-    prt:distance 1500 .
+# May not be nessesary
+#node:1 prt:hasLinks link:1 .
+#node:1 prt:hasLinks link:3 .
