@@ -5,6 +5,7 @@ function PodCar(id) {
 	this.assignments = []; // {to: 'node:8'}
 	this.currentLink = {};
 	this.tta = 0;
+	this.speed = 5;
 	
 	this.setLocation = function (loc) {
 		this.location = loc;
@@ -37,8 +38,13 @@ function PodCar(id) {
 	this.next = function () {
 		if (this.assignment.length > 0) {
 			if (this.assignment[0].to == this.currentLink.to) { // Close
-				
+				if (this.currentLink.distance > this.location.distance) {
+					this.location.distance += this.speed;
+				} else {
+					console.log ("Arrived! Successfully Dilivered Rider: "+this.assignment[0].rider);
+				}
 			}
+			
 			this.assignment[0]
 		}
 	}

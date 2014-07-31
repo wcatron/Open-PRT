@@ -12,7 +12,7 @@ function Server() {
 			podcar.next();
 		}
 	}
-	this.takeRequest = function () {
+	this.takeRequest = function (request) {
 		for (var podcar in this.podcars) {
 			if (podcar.available()) {
 				podcar.
