@@ -1,4 +1,4 @@
-Nodes
+Objects
 ==============
 
 The objects interacting with the protocols.
