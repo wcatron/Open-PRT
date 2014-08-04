@@ -6,7 +6,7 @@
 
 ### Phase 1
 
-Section of parts of NYC to make car free and use only podcar transportation within them. Take the block around Central Park up to the parrallel streets and remove all car transporation. This would clean up some of the noise polution around the fringes of the park and allow anyone to quickly go from one side to the other. A podcar could be called up to any street. Podcar parking would be built under some streets.
+Section off parts of NYC and use only podcar transportation within them. Take the block around Central Park up to the parrallel streets and remove all car transporation. This would clean up some of the noise polution around the fringes of the park and allow anyone to quickly go from one side to the other. A podcar could be called up to any street. Podcar parking would be built under some streets.
 
 ### Phase 2
 
