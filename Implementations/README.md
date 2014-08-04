@@ -7,10 +7,16 @@ These are just ideas for how introduce the Open PRT system to various cities aro
 ### NYC
 
 - Sectioning
-- Mass Transit replacement
+- Metro replacement
 
 ### Atlanta
 
 - University Pilot
 - Temporary Parking
 - Commute via Rail
+
+### San Francisco
+
+- Crossover PodCars
+- Airport Connector
+- Highway Rail Hosting
