@@ -8,15 +8,19 @@ function Server() {
 		this.podcars[podcar.id] = undefined;
 	}
 	this.next = function (){
-		for (var podcar in this.podcars) {
+		for (var index in this.podcars) {
+			var podcar = this.podcars[index];
 			podcar.next();
 		}
 	}
 	this.takeRequest = function (request) {
-		for (var podcar in this.podcars) {
+		for (var index in this.podcars) {
+			var podcar = this.podcars[index];
 			if (podcar.available()) {
-				podcar.
-				return true;
+				if (podcar.takeAssignment(request)) {
+					console.log('Assigned request: '+request+' to PodCar: '+podcar.id);
+					return true;
+				}
 			}
 		}
 		return false;

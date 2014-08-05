@@ -4,7 +4,8 @@ function Rider() {
 	this.requestRide = function (fromNode, toNode) {
 		this.location = fromNode;
 		var result;
-		for (var server in this.knownServers) {
+		for (var index in this.knownServers) {
+			var server = this.knownServers[index];
 			result = server.takeRequest({from:fromNode, to:toNode, rider:this});
 			if (result) {
 				return;
