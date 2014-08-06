@@ -35,7 +35,7 @@
 			var pod_car = new PodCar(i);
 			pod_car.knownServers = servers;
 			pod_car.setLocation({
-				"link":(i+1),
+				"link":"link:"+(i+1),
 				"distance":10+i*4
 			});
 			pod_car.getBaseServer();
@@ -44,7 +44,11 @@
 		var rider_1 = new Rider();
 		rider_1.knownServers = servers;
 		
+		var rider_2 = new Rider();
+		rider_2.knownServers = servers;
+		
 		rider_1.requestRide("node:5","node:9");
+		rider_2.requestRide("node:2","node:7");
 		
 		function next () {
 			time += 1;
@@ -57,10 +61,10 @@
 		
 		window.setInterval(function(){
 		  /// call your function here
-		  if (time < 50) {
+		  if (time < 350) {
 		  	next();
 		  }
-		}, 100);
+		}, 50);
 		
 		</script>
 	</head>

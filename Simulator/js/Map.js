@@ -2,12 +2,12 @@ var Map = {
 	links: []
 };
 Map.getLink = function (link) {
-	var results = $.fn.query("SELECT ?to ?from ?distance WHERE { link:"+link+" prt:toNode ?to ; prt:fromNode ?from ; prt:distance ?distance . }");
+	var results = $.fn.query("SELECT ?to ?from ?distance WHERE { "+link+" prt:toNode ?to ; prt:fromNode ?from ; prt:distance ?distance . }");
 	if (results.length == 0) {
 		return null;
 	}
 	var link = {
-		link:'link:'+link,
+		link:link,
 		to: $.fn.resolvePrefix(results[0].to.value),
 		from: $.fn.resolvePrefix(results[0].from.value),
 		distance: parseInt(results[0].distance.value)
@@ -18,14 +18,22 @@ Map.getBestLink = function (starting_node,ending_node) {
 	var choices = this.loadLinksFromNode(starting_node);
 	var options = [
 	];
+	var found = false;
 	for (var i = 0; i < choices.length; i++) {
 		var option = {
 			'links':[choices[i].link],
 			'distance':choices[i].distance
 		};
 		options.push(option);
+		if (choices[i].to == ending_node) {
+			found = true;
+			return {
+				link: choices[i].link,
+				distance: choices[i].distance
+			};
+		}
 	}
-	var found = false;
+	
 	while (!found) {
 		var shortest_option = options[0];
 		var shortest_option_index = 0;
@@ -41,22 +49,36 @@ Map.getBestLink = function (starting_node,ending_node) {
 		
 		var last_link = shortest_option.links[shortest_option.links.length - 1];
 		
-		var choices = this.loadLinksFromNode(last_link.to);
+		var sec_last_link = "null";
+		if (shortest_option.links.length > 1) {
+			var sec_last_link = shortest_option.links[shortest_option.links.length - 2];
+		}
+		
+		var choices = this.loadLinksFromNode(this.getLink(last_link).to);
 		
 		for (var i = 0; i < choices.length; i++) {
-			var links = shortest_option.links;
-			links.push(choices[i].link);
-			var option = {
-				'links':links,
-				'distance':shortest_option.distance+choices[i].distance
-			};
-			options.push(option);
-			if (choices[i].link.to == ending_node) {
-				found = true;
+			if (choices[i].link != sec_last_link) {
+				var links = shortest_option.links.slice(0);
+				links.push(choices[i].link);
+				var distance = shortest_option.distance + choices[i].distance;
+				var option = {
+					'links':links,
+					'distance':distance
+				};
+				options.push(option);
+				if (choices[i].to == ending_node) {
+					found = true;
+					return {
+						link: shortest_option.links[0],
+						distance: distance
+					};
+				}
+			} else {
+				console.log('Eliminated loop');
 			}
 		}
 		
-		options.pop(i);
+		options.splice(shortest_option_index,1);
 	}
 	
 	console.log("found");
