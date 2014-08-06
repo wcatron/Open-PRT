@@ -47,8 +47,12 @@
 		var rider_2 = new Rider();
 		rider_2.knownServers = servers;
 		
+		var rider_3 = new Rider();
+		rider_3.knownServers = servers;
+		
 		rider_1.requestRide("node:5","node:9");
 		rider_2.requestRide("node:2","node:7");
+		rider_3.requestRide("node:8","node:3");
 		
 		function next () {
 			time += 1;
