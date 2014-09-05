@@ -37,6 +37,23 @@ The server's goal is to assign tasks to their fleet. Maintain the health of thie
 - ServiceCenters
 - Zone
 
+## Node
+
+Manages the PodCars coming into the node through the connecting links.
+
+#### Goals
+
+The Node's goal is to direct traffic much like a traffic light although in addition it would direct the PodCar to the "best" route based on it's local knowledge and other optimisation efforts. Not all nodes are the same and their are not physical devices or servers. One physical server could handle thousands of simple intersections for loading stations while another could handle one busy interection.
+
+#### Data
+
+- TimeTables
+- ConnectedNodes
+- Requests
+- KnownServers
+- ServiceCenters
+- Zone
+
 ## PodCar
 
 #### Goals
