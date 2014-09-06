@@ -23,7 +23,7 @@ Server -> Rider
 ```
 
 Server then begins processing the request. 
-- Check for podcar which are available, or will become available within a certain threshold, near the request.location from the server.operationalSet of podcars. Keep broadening scope until a match is found.
+- Check for available PodCars, or those which will become available within a certain threshold, near the request.location from the server.operationalSet of podcars. Keep broadening scope until a match is found.
 
 ```
 Server -> PodCar
