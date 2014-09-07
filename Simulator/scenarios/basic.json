@@ -1,0 +1,26 @@
+{
+	1: [
+	{
+		"from":"node:7",
+		"to":"node:1"
+	},{
+		"from":"node:10",
+		"to":"node:3"
+	},{
+		"from":"node:4",
+		"to":"node:6"
+	}
+	],
+	20: [
+	{
+		"from":"node:7",
+		"to":"node:1"
+	}
+	],
+	100: [
+	{
+		"from":"node:2",
+		"to":"node:4"
+	}
+	]
+}

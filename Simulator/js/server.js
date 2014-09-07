@@ -1,4 +1,5 @@
-function Server() {
+function Server(id) {
+	this.id = id;
 	this.zone = [];
 	this.podcars = [];
 	this.trackPodCar = function (podcar) {

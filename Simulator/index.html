@@ -1,14 +1,21 @@
 <html>
 	<head>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="http:////cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.min.js"></script>
+		<link rel="stylesheet" href="styles/Simulator.css" type="text/css" media="screen" title="no title" charset="utf-8">
 		<script src='js/server.js'></script>
 		<script src='js/podcar.js'></script>
 		<script src='js/rider.js'></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src='js/Simulator.js'></script>
 		<script src='js/jquery.sparql.js'></script>
 		<script src='js/Map.js'></script>
 		<script>
 		
-		var server_1 = new Server();
+		$(function () {
+			simulator.createVisual();
+		});
+		
+		var server_1 = new Server(1);
 		server_1.zone = [
 						"node:3",
 						"node:4",
@@ -16,7 +23,7 @@
 						"node:6",
 						"node:7",
 						"node:8"];
-		var server_2 = new Server();
+		var server_2 = new Server(2);
 		server_2.zone = [
 						"node:1",
 						"node:2",
@@ -27,7 +34,7 @@
 		
 		var servers = [server_1, server_2];
 		
-		var num_pod_cars = 10;
+		var num_pod_cars = 6;
 		var speed = 10; //distance per time
 		var time = 0;
 		
@@ -41,25 +48,23 @@
 			pod_car.getBaseServer();
 		} 
 		
-		var rider_1 = new Rider();
-		rider_1.knownServers = servers;
-		
-		var rider_2 = new Rider();
-		rider_2.knownServers = servers;
-		
-		var rider_3 = new Rider();
-		rider_3.knownServers = servers;
-		
-		rider_1.requestRide("node:5","node:9");
-		rider_2.requestRide("node:2","node:7");
-		rider_3.requestRide("node:8","node:3");
+		schedules_rides = require('scenarios/basic.json');
 		
 		function next () {
 			time += 1;
+			if (schedules_rides[time]) {
+				for (var index in schedules_rides[time]) {
+					var scheduled_ride = schedules_rides[time][index];
+					var rider = new Rider();
+					rider.knownServers = servers;
+					rider.requestRide(scheduled_ride.from,scheduled_ride.to);
+				}
+			}
 			for (var index in servers) {
 				var server = servers[index];
 				server.next();
 			}
+			simulator.refreshVisual();
 		}
 		
 		
