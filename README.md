@@ -7,6 +7,9 @@ Open source documentation and protocols for a scalable Personal Rapid Transit (P
 
 To create a standard for communciation between riders, podcars and decenteralized servers to maintain a PRT system. Our inspiration comes from growth of the internet due to standards, openness and healthy capitalism. We believe that any successful system will come about through a community effort and not by a single governing body, company or even a select few. 
 
+## Based on the principles of the Internet
+
+
 ### User Experience
 
 1. Rider uses a personal input device (phone, watch) to request a car either ASAP or for a scheduled time and their location. The rider also enters their destination.
