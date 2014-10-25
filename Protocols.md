@@ -142,3 +142,5 @@ PodCar -> Node
 }
 
 ```
+
+Other communications include confirmations when necessary and cancelations.
