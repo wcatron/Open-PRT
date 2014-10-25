@@ -27,7 +27,7 @@ The server's goal is to assign tasks to their fleet. Maintain the health of thie
 
 #### Data
 
-- Fleet 
+- Fleet
 	- Location
 	- FreeAt
 	- Vitals
@@ -83,7 +83,7 @@ The scanner's goal is to inspect PodCars for exposives, toxins, and general wast
 
 #### Goals
 
-The service center's goal is to maintain PodCars that are assigned to go to them. They diagnose the problem and verify them for road safty.
+The service center's goal is to maintain PodCars that are assigned to go to them. They diagnose the problem and verify them for road safety. Example of vitals that must be maintained: oil, tire pressure, tire wear, battery charge, and cleanliness.
 
 #### Data
 
