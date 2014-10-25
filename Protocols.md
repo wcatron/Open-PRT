@@ -22,7 +22,7 @@ Server -> Rider
 }
 ```
 
-Server then begins processing the request. 
+Server then begins processing the request.
 - Check for available PodCars, or those which will become available within a certain threshold, near the request.location from the server.operationalSet of podcars. Keep broadening scope until a match is found.
 
 ```
@@ -66,4 +66,4 @@ PodCar -> Server
 
 ### Rider Anon-Status Update
 
-Rider applications periodically alert the nearest server of thier location to allow podcars to preemtivally deploy to densly populated areas.
+Rider applications periodically alert the nearest server of their location to allow PodCars to preemptively deploy to densely populated areas.
