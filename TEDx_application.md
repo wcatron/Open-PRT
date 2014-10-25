@@ -17,4 +17,3 @@ Many attempts have been made to implement PRT systems. None, to my knowledge, ha
 ## What is your call to action for this idea?
 
 We need to reconsider many of the fundamental ideas we have about transportation and economics such as ownership, competition, and regulation. The technology to create Open PRT is available, but we have to be willing to accept and share it.
-Provide a brief bio relevant to this talk.
