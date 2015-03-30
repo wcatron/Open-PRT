@@ -18,4 +18,6 @@ RewriteRule ^$ template.php?page=about.php
 RewriteRule ^about$ template.php?page=about.php
 RewriteRule ^news$ template.php?page=news.php
 
-RewriteRule ^simulation(/.*)?$ /pages/simulator.php?page=$1
+RewriteRule ^simulation$ template.php?page=simulator_coming_soon.php [L]
+
+# RewriteRule ^simulation(/.*)?$ /pages/simulator.php?page=$1
