@@ -3,4 +3,4 @@
 
 <p><h4>Coming Soon!</h4></p>
 
-<p>If you'd like to help develop this please <a href="mailto:wcatron@catrondevelopment.com">contact us</a>!</p>
+<p>If you'd like to help with development please <a href="mailto:wcatron@catrondevelopment.com">contact us</a>!</p>
