@@ -1,2 +1,17 @@
+<ifModule mod_headers.c>
+<FilesMatch "\.(html|htm|js|css|php)$">
+Header unset ETag
+Header set Cache-Control "max-age=0, no-store, must-revalidate"
+Header set Pragma "no-cache"
+Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+</FilesMatch>
+<FilesMatch "\.(png|jpg)$">
+Header set Cache-Control "max-age=604800"
+</FilesMatch>
+</ifModule>
+
+RewriteEngine on
+
+RewriteRule \.git - [F,L]
 
 RewriteRule about template.php?page=about.php
