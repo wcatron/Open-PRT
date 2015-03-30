@@ -18,4 +18,4 @@ RewriteRule ^$ template.php?page=about.php
 RewriteRule ^about$ template.php?page=about.php
 RewriteRule ^news$ template.php?page=news.php
 
-RewriteRule ^simulation(/.*)?$ /home/catrondevelopment/Open-PRT/Simulator$1
+RewriteRule ^simulation(/.*)?$ /pages/simluator.php?page=$1
