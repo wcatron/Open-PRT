@@ -1,0 +1,2 @@
+
+RewriteRule about template.php?page=about.php
