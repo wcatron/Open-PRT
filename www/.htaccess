@@ -14,7 +14,7 @@ RewriteEngine on
 
 RewriteRule \.git - [F,L]
 
-RewriteRule ^$ template.php?page=about.php
+RewriteRule ^$ home.html
 RewriteRule ^about$ template.php?page=about.php
 RewriteRule ^news$ template.php?page=news.php
 
